@@ -1501,7 +1501,7 @@ export default function App() {
 
           {/* Quick Pre-order cart slider banner if user selects something */}
           {preOrderedItems.length > 0 && (
-            <div className="mt-12 bg-[#2d1e15] border-2 border-[#d4af37]/60 p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 animate-slide-up" id="pre-order-calculator-tray">
+            <div className="fixed bottom-6 left-6 right-6 lg:left-32 lg:right-32 z-50 bg-[#2d1e15]/95 backdrop-blur-md border-2 border-[#d4af37] p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 animate-slide-up shadow-2xl rounded-lg" id="pre-order-calculator-tray">
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
