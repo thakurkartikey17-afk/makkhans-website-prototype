@@ -1012,7 +1012,7 @@ export default function App() {
               <span className="text-lg md:text-xl font-serif tracking-[0.15em] text-[#d4af37] font-bold group-hover:text-white transition-colors leading-none">
                 MAKKHAN'S
               </span>
-              <span className="text-[8px] uppercase tracking-[0.3em] text-[#d4af37]/60 mt-1.5 font-sans">
+              <span className="text-[8px] uppercase tracking-[0.3em] text-[#d4af37]/85 mt-1.5 font-sans">
                 ESTD. 2008 • PRAYAGRAJ
               </span>
             </div>
@@ -1032,7 +1032,7 @@ export default function App() {
             <button 
               onClick={scrollToReservation}
               id="header-booking-btn"
-              className="hidden sm:inline-flex px-6 py-2.5 bg-[#d4af37] text-[#1a0f0a] text-xs uppercase font-black tracking-widest hover:bg-[#ebd06f] hover:scale-[1.03] active:scale-[0.98] transition-all shadow-md group items-center gap-1.5 cursor-pointer"
+              className="inline-flex px-3.5 py-2 sm:px-6 sm:py-2.5 bg-[#d4af37] text-[#1a0f0a] text-[10px] sm:text-xs uppercase font-black tracking-widest hover:bg-[#ebd06f] hover:scale-[1.03] active:scale-[0.98] transition-all shadow-md group items-center gap-1.5 cursor-pointer"
             >
               <Calendar size={13} className="text-[#1a0f0a]" />
               Book Table
@@ -1053,7 +1053,7 @@ export default function App() {
 
       {/* MOBILE MENU NAV SYSTEM */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-30 bg-[#1a0f0a] flex flex-col justify-between pt-24 px-8 pb-10 border-b-[8px] border-[#d4af37]" id="mobile-navigation-overlay">
+        <div className="fixed inset-0 z-30 bg-[#1a0f0a] flex flex-col justify-between pt-24 px-8 pb-10 border-b-[8px] border-[#d4af37] overflow-y-auto max-h-screen" id="mobile-navigation-overlay">
           <div className="flex flex-col gap-6 text-center mt-6">
             <span className="text-[10px] uppercase tracking-[0.4em] text-[#d4af37]">Royal Navigation</span>
             <a 
@@ -1099,7 +1099,7 @@ export default function App() {
               <a href="https://zomato.onelink.me/xqzv/tszn5il6" target="_blank" rel="noopener noreferrer" className="flex-1 py-2.5 bg-[#e23744] text-white hover:bg-[#c92531] text-xs font-bold rounded flex items-center justify-center gap-1">
                 Zomato
               </a>
-              <a href="https://www.swiggy.com/city/allahabad/makkhans-veg-restaurant-civil-lines-rest80461?source=sharing" target="_blank" rel="noopener noreferrer" className="flex-1 py-2.5 bg-[#fc8019] text-white hover:bg-[#e47610] text-xs font-bold rounded flex items-center justify-center gap-1">
+              <a href="https://www.swiggy.com/city/allahabad/makkhans-veg-restaurant-civil-lines-rest80461?source=sharing" target="_blank" rel="noopener noreferrer" className="flex-1 py-2.5 bg-[#fc8019] text-[#1a0f0a] hover:bg-[#e47610] text-xs font-black rounded flex items-center justify-center gap-1">
                 Swiggy
               </a>
             </div>
@@ -1200,7 +1200,7 @@ export default function App() {
       </section>
 
       {/* CORE CONNECTED CONVERSION PLATFORM BLOCK */}
-      <section className="py-20 px-6 bg-[#1a0f0a] relative overflow-hidden" id="partners-section">
+      <section className="py-20 px-6 bg-[#1a0f0a] relative overflow-hidden scroll-mt-20" id="partners-section">
         <div className="max-w-6xl mx-auto">
           
           <div className="text-center mb-16">
@@ -1255,7 +1255,7 @@ export default function App() {
                 href="https://www.swiggy.com/city/allahabad/makkhans-veg-restaurant-civil-lines-rest80461?source=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-full py-3 bg-[#fc8019] hover:bg-[#e97514] text-white text-xs uppercase tracking-widest font-black text-center flex items-center justify-center gap-1.5 transition-colors mt-auto shadow"
+                className="w-full py-3 bg-[#fc8019] hover:bg-[#e97514] text-[#1a0f0a] text-xs uppercase tracking-widest font-black text-center flex items-center justify-center gap-1.5 transition-colors mt-auto shadow"
               >
                 Order on Swiggy <ExternalLink size={12} />
               </a>
@@ -1328,7 +1328,7 @@ export default function App() {
       </section>
 
       {/* TEXT-BASED INTERACTIVE MENU PREVIEW WITH SEARCH & VEG FILTER */}
-      <section className="py-24 px-6 bg-[#140b07] border-t border-b border-[#d4af37]/20 relative" id="menu-showcase">
+      <section className="py-24 px-6 bg-[#140b07] border-t border-b border-[#d4af37]/20 relative scroll-mt-20" id="menu-showcase">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#d4af37]/5 rounded-bl-full blur-[100px] pointer-events-none"></div>
         <div className="max-w-6xl mx-auto">
           
@@ -1360,7 +1360,7 @@ export default function App() {
                 )}
               </div>
               
-              <div className="flex bg-[#1a0f0a] border border-[#d4af37]/20 p-1 select-none" id="menu-type-toggle-button-set">
+              <div className="flex flex-col sm:flex-row bg-[#1a0f0a] border border-[#d4af37]/20 p-1 select-none w-full sm:w-auto" id="menu-type-toggle-button-set">
                 <button 
                   onClick={() => { setMenuType('standard'); setSelectedCategory('all'); }}
                   className={`flex-1 sm:flex-none px-4 py-2 text-[10px] uppercase font-bold tracking-widest transition-colors ${
@@ -1432,7 +1432,7 @@ export default function App() {
                             {dish.tag}
                           </span>
                         )}
-                        <span className="text-[9px] opacity-40 ml-auto">{dish.calories} Kcal</span>
+                        <span className="text-[9px] opacity-70 ml-auto">{dish.calories} Kcal</span>
                       </div>
 
                       <h3 className="text-lg md:text-xl font-serif text-[#f5f2ed] mb-1 font-semibold group-hover:text-[#d4af37] transition-colors">
@@ -1447,7 +1447,7 @@ export default function App() {
                       <div className="text-[#d4af37] font-serif text-lg font-bold">
                         ₹{dish.price}
                       </div>
-                      <div className="text-[10px] opacity-40 italic">Serves 1-2</div>
+                      <div className="text-[10px] opacity-70 italic">Serves 1-2</div>
                     </div>
                   </div>
 
@@ -1538,7 +1538,7 @@ export default function App() {
       </section>
 
       {/* AMBIANCE GALLERY BENTO GRID WITH INTERACTIVE LIGHTBOX VIEW */}
-      <section className="py-24 px-6 bg-[#1a0f0a]" id="ambiance-section">
+      <section className="py-24 px-6 bg-[#1a0f0a] scroll-mt-20" id="ambiance-section">
         <div className="max-w-6xl mx-auto">
           
           <div className="text-center mb-16">
@@ -1614,7 +1614,7 @@ export default function App() {
             id="lightbox-popup-dialog"
           >
             <div 
-              className="bg-[#261811] border-2 border-[#d4af37] max-w-4xl w-full p-6 md:p-8 relative"
+              className="bg-[#261811] border-2 border-[#d4af37] max-w-4xl w-full p-6 md:p-8 relative max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button 
@@ -1672,7 +1672,7 @@ export default function App() {
       </section>
 
       {/* THE LEGACY TIMELINE STORY - RICH BROWN & GOLD */}
-      <section className="py-24 px-6 bg-[#140b07] border-t border-b border-[#d4af37]/20 relative overflow-hidden" id="legacy-story">
+      <section className="py-24 px-6 bg-[#140b07] border-t border-b border-[#d4af37]/20 relative overflow-hidden scroll-mt-20" id="legacy-story">
         <div className="absolute top-1/4 left-0 w-80 h-80 bg-[#d4af37]/3 rounded-br-full blur-[80px] pointer-events-none"></div>
         <div className="max-w-5xl mx-auto">
           
@@ -1707,12 +1707,15 @@ export default function App() {
             ].map((milestone, idx) => (
               <div key={idx} className="relative pl-8 md:pl-12 group">
                 {/* Year tag left-of timeline on desktop */}
-                <div className="absolute left-[-16px] md:-left-32 top-1.5 flex items-center justify-end w-8 md:w-28 text-right">
+                <div className="hidden md:flex absolute md:-left-32 top-1.5 items-center justify-end w-28 text-right">
                   <span className="text-[#d4af37] font-serif text-xl md:text-2xl font-black">{milestone.year}</span>
                 </div>
                 
                 {/* Node indicator */}
                 <div className="absolute left-[-9px] top-3.5 w-4 h-4 rounded-full bg-[#140b07] border-2 border-[#d4af37] group-hover:bg-[#d4af37] transition-all duration-300"></div>
+                
+                {/* Mobile Year tag above title */}
+                <span className="md:hidden text-[#d4af37] font-serif text-lg font-bold block mb-1">{milestone.year}</span>
                 
                 <h3 className="text-xl font-serif font-bold text-[#f5f2ed] mb-2 group-hover:text-[#d4af37] transition-colors">{milestone.title}</h3>
                 <p className="text-sm text-[#f5f2ed]/75 leading-relaxed max-w-2xl">{milestone.desc}</p>
@@ -1730,7 +1733,7 @@ export default function App() {
       </section>
 
       {/* TESTIMONIAL CAROUSEL */}
-      <section className="py-24 px-6 bg-[#1a0f0a]" id="reviews">
+      <section className="py-24 px-6 bg-[#1a0f0a] scroll-mt-20" id="reviews">
         <div className="max-w-4xl mx-auto">
           
           <div className="text-center mb-12">
@@ -1800,7 +1803,7 @@ export default function App() {
       </section>
 
       {/* RESERVATION CARD & INTERACTIVE CONFIRMATION WIDGET */}
-      <section className="py-24 px-6 bg-[#140b07] border-t-2 border-[#d4af37]/30 relative overflow-hidden" ref={reservationCardRef} id="reservation-hub">
+      <section className="py-24 px-6 bg-[#140b07] border-t-2 border-[#d4af37]/30 relative overflow-hidden scroll-mt-20" ref={reservationCardRef} id="reservation-hub">
         
         {/* Subtle decorative circles */}
         <div className="absolute right-0 bottom-0 w-[500px] h-[500px] bg-[#d4af37]/4 rounded-full blur-[100px] pointer-events-none"></div>
@@ -1944,7 +1947,7 @@ export default function App() {
                     Confirm Luxury Table Invitation <Check size={20} />
                   </button>
 
-                  <p className="text-[10px] text-center opacity-50 uppercase tracking-wider">
+                  <p className="text-[10px] text-center opacity-75 uppercase tracking-wider">
                     Or directly phone our receptionist desk: +91 532 240 8599
                   </p>
                 </form>
@@ -1962,7 +1965,7 @@ export default function App() {
                   <div>
                     <div className="flex justify-between items-center border-b border-[#d4af37]/20 pb-4 mb-6">
                       <div className="text-left">
-                        <span className="text-[9px] uppercase tracking-[0.2em] opacity-50">BOARDING SYSTEM</span>
+                        <span className="text-[9px] uppercase tracking-[0.2em] opacity-75">BOARDING SYSTEM</span>
                         <p className="font-serif text-[#d4af37] font-semibold text-lg">Makkhan's Invites</p>
                       </div>
                       <div className="text-right">
@@ -1974,32 +1977,32 @@ export default function App() {
                     <div className="space-y-4">
                       
                       <div className="flex justify-between items-center text-xs">
-                        <span className="opacity-50 uppercase tracking-widest">PATRON</span>
+                        <span className="opacity-70 uppercase tracking-widest">PATRON</span>
                         <span className="font-bold text-[#f5f2ed]">{resName || "PENDING ENTRY"}</span>
                       </div>
 
                       <div className="flex justify-between items-center text-xs">
-                        <span className="opacity-50 uppercase tracking-widest">CONTACT</span>
+                        <span className="opacity-70 uppercase tracking-widest">CONTACT</span>
                         <span className="font-bold text-white">{resPhone || "PENDING PHONE"}</span>
                       </div>
 
                       <div className="flex justify-between items-center text-xs">
-                        <span className="opacity-50 uppercase tracking-widest">INVITE DATE</span>
+                        <span className="opacity-70 uppercase tracking-widest">INVITE DATE</span>
                         <span className="font-bold text-[#d4af37]">{resDate}</span>
                       </div>
 
                       <div className="flex justify-between items-center text-xs">
-                        <span className="opacity-50 uppercase tracking-widest">ATTEND TIME</span>
+                        <span className="opacity-70 uppercase tracking-widest">ATTEND TIME</span>
                         <span className="font-bold text-[#d4af37]">{resTime}</span>
                       </div>
 
                       <div className="flex justify-between items-center text-xs">
-                        <span className="opacity-50 uppercase tracking-widest">GUESTS AT LEVEL</span>
+                        <span className="opacity-70 uppercase tracking-widest">GUESTS AT LEVEL</span>
                         <span className="font-bold text-[#f5f2ed]">{resGuests} VIPs</span>
                       </div>
 
                       <div className="flex justify-between items-center text-xs">
-                        <span className="opacity-50 uppercase tracking-widest">RESERVED POINT</span>
+                        <span className="opacity-70 uppercase tracking-widest">RESERVED POINT</span>
                         <span className="font-bold text-white text-right">{resSeating}</span>
                       </div>
                     </div>
@@ -2023,7 +2026,7 @@ export default function App() {
                       </div>
                     ) : (
                       <div className="mt-8 p-4 bg-[#1a0f0a] border border-[#d4af37]/10 text-center rounded-sm">
-                        <p className="text-[11px] opacity-65 italic">Did you know? You can pre-add luxury menu items in the "Culinary Card" above, and they will print directly onto your gold receipt ticket!</p>
+                        <p className="text-[11px] opacity-80 italic">Did you know? You can pre-add luxury menu items in the "Culinary Card" above, and they will print directly onto your gold receipt ticket!</p>
                       </div>
                     )}
                   </div>
@@ -2132,7 +2135,7 @@ export default function App() {
                 </button>
               </div>
 
-              <p className="text-[10px] opacity-40 uppercase tracking-tighter mt-6">
+              <p className="text-[10px] opacity-70 uppercase tracking-tighter mt-6">
                 * Note: A digital authentication receipt has been synced with local storage successfully. Welcome to real Indian flavors.
               </p>
 
@@ -2152,7 +2155,7 @@ export default function App() {
               <MakhhansLogo className="w-12 h-12" />
               <div className="flex flex-col">
                 <span className="text-xl font-serif tracking-[0.15em] text-[#d4af37] font-bold leading-none">MAKKHAN'S</span>
-                <span className="text-[9px] uppercase tracking-[0.3em] text-[#d4af37]/60 mt-1.5 font-sans">
+                <span className="text-[9px] uppercase tracking-[0.3em] text-[#d4af37]/85 mt-1.5 font-sans">
                   ESTD. 2008 • PRAYAGRAJ
                 </span>
               </div>
@@ -2221,10 +2224,10 @@ export default function App() {
 
         {/* BOTTOM ATTRIBUTION RACK complying with anti-ai-slop rules (humble, aesthetic) */}
         <div className="max-w-6xl mx-auto border-t border-[#d4af37]/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <p className="text-[#f5f2ed]/50 text-center md:text-left">
+          <p className="text-[#f5f2ed]/75 text-center md:text-left">
             &copy; 2026 Makkhan's Hospitality Group Prayagraj Private Limited. All Rights Reserved.
           </p>
-          <div className="flex gap-6 text-[#f5f2ed]/40">
+          <div className="flex gap-6 text-[#f5f2ed]/75">
             <a href="#" className="hover:text-[#d4af37] transition-colors">Privacy Policy</a>
             <span>&bull;</span>
             <a href="#" className="hover:text-[#d4af37] transition-colors">FSSAI License #12716075000412</a>
