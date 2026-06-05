@@ -1,0 +1,6 @@
+{
+  "name": "Makkhan's Restaurant",
+  "description": "Premium fine dining culinary experience at Makkhan's Restaurant, Prayagraj. Book reservations, explore the signature menu, and connect with direct delivery and social platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
